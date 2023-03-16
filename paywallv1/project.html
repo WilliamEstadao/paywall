@@ -21,10 +21,11 @@
                     </div>
                 </div>
                 <div id="offer-digital" style="margin-left: 25px;margin-right: 25px;">
+                       
                     <div class="voucher1-digital">
-                        <p>Recomendamos</p>
+                            <p>Recomendamos</p>
                     </div>
-                    <div class="highlight-offer">
+                        <div class="highlight-offer">
                         <div>
                             <h2 class="title-offer">DIGITAL COMPLETA + R$30 CARREFOUR</h2>
                             <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$190,80/ano
@@ -92,15 +93,15 @@
                     </div>
                 </div>
                 <button class="continue" onclick="goOffer()">continuar</button>
-                <p style="font-size: 12px; color: #717171;">Cancele quando quiser</p>
-                <footer>
+                <p style="font-size: 12px; color: #717171; margin:14px;">Cancele quando quiser</p>
+                <footer class="footer-modal">
                     <svg style="width:15px;margin-right:2px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M22 12V8a6 6 0 0 0-12 0v4H4v12a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V12ZM12 8a4 4 0 0 1 8 0v4h-8Zm14 16a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V14h20Z"
                             fill="#717171" class="fill-000000"></path>
                     </svg>
 
-                    <p style="color:#717171">Ambiente Seguro</p>
+                    <p style="color:#717171;">Ambiente Seguro</p>
                 </footer>
 
             </div>
@@ -231,6 +232,16 @@
 </script>
 <style>
     /* ----------------------------------------DESKTOP------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body{
+  overflow: hidden;
+}
 .button-newpaywall{
   width: 96px;
   height: 27px;
@@ -248,29 +259,25 @@
   box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.16);
   background-color: #f9f9f9;
   font-family: 'Lato';
-  padding-top: 16px;
   box-sizing: border-box;
   }
-  .background{
+  .background {
+    z-index: 19;
     background-color: rgba(0, 0, 0, 0.473);
-    width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-y: unset;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    padding:8px;
+}
 .initial-text-button{
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 50%;
-  margin-top: 0;
-  padding: 0;
+  margin-top: 30px;
 }
 .master-template{
   display:flex; 
@@ -282,7 +289,8 @@
   display: flex; 
   flex-direction: column;
   align-items: center;
-  line-height: 0;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 .card-selector{
   display: flex;
@@ -328,14 +336,16 @@
 .highlight-offer{
   border-radius: 8px;
   background-color: #2575e8;
-  padding: 0px 16.9px;
-  width: 430px;
+  padding: 16px;
+  max-width: 430px;
   color: white;
   display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
   font-family: 'Lato';
-  line-height: 1.3;
+  line-height: 2;
 }
 .circle{
   width: 28px;
@@ -349,41 +359,44 @@
   align-items: center;
 }
 .offer{
+  max-width: 430px;
   border-radius: 8px;
   border: solid 1px #2575e8;
   background-color: #fff;
-  padding: 0px 16.9px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color:#717171;
   margin-top:25px;
-  line-height: 1.3;
+  line-height: 2;
 }
 .offer1-impresso{
   border-radius: 8px;
-  width: 430px;
+  max-width: 430px;
   background-color: white;
   border: solid 1px #2575e8;
-  padding: 0px 16.9px;
+  padding: 16px;
   color: #717171;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Lato';
-  line-height: 1.3;
+  line-height: 2;
+  box-sizing: border-box;
 }
 .offer2-impresso{
   border-radius: 8px;
   border: solid 1px #2575e8;
   background-color: #fff;
-  padding: 0px 16.9px;
+  padding:16px;
+  max-width: 430px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color:#717171;
   margin-top:30px;
-  line-height: 1.3;
+  line-height: 2;
 }
 
 .title-offer{
@@ -403,7 +416,7 @@ font-style: italic;
 }
 .voucher1-digital{
   background-color: #f19b2c;
-  width: 127.4px;
+  width: 120px;
   height: 26.5px;
   display: flex;
   justify-content: center;
@@ -414,13 +427,14 @@ font-style: italic;
   color: white;
   border-radius: 4px ;
   text-transform: uppercase;
-  position: absolute;
-  margin-left:300px;
-  margin-top:-16px;
+  margin-left:280px;
+  margin-bottom:-16px;
+  z-index: 1;
+  position: relative;
 }
 .voucher2-digital{
   background-color: #2575e8;
-  width: 127.4px;
+  width: 120px;
   height: 26.5px;
   display: flex;
   justify-content: center;
@@ -433,7 +447,7 @@ font-style: italic;
   text-transform: uppercase;
   position: absolute;
   margin-top:10px;
-  margin-left:300px;
+  margin-left:280px;
 }
 .voucher1-impresso{
   background-color: #e82525;
@@ -449,7 +463,7 @@ font-style: italic;
   border-radius: 4px ;
   text-transform: uppercase;
   position: absolute;
-  margin-left:300px;
+  margin-left:280px;
   margin-top:-16px;
 }
 .voucher2-impresso{
@@ -467,12 +481,12 @@ font-style: italic;
   text-transform: uppercase;
   position: absolute;
   margin-top:140px;
-  margin-left:300px;
+  margin-left:280px;
 }
 .continue{
   padding: 9.5px;
   margin-top: 14px;
-  width: 90%;
+  width: 87%;
   border-radius: 5px;
   background-color: #529c3f;
   border:none;
@@ -481,7 +495,7 @@ font-style: italic;
   color: white;
   cursor: pointer;
 }
-footer{
+.footer-modal{
   padding: 0;
   width: 100%;
   margin-bottom: 0;
