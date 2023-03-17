@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-    <title>Document</title>
-</head>
-
-<body>
-    <main class="modal">
+    <main class="background">
+    <div class="modal">
         <div class="spaceOffers">
             <p class="initial-text">Assine já e tenha acesso ilimitado</p>
             <h1 style="color: #f19b2c;text-align: center;font-size: 22px">OFERTA ESPECIAL<br /><span
                     style="color:black">COM 91% OFF</span></h1>
-            <p style="color: #717171; font-size: 12px;margin-top: 0;">Cancele quando quiser</p>
+            <p style="color: #717171; font-size: 12px;margin:10px;">Cancele quando quiser</p>
             <div class="offer">
                 <h2 style="font-size: 20px">DIGITAL COMPLETA</h2>
                 <p style="text-decoration: line-through;">R$21,90/mês</p>
@@ -27,9 +16,9 @@
                         aproveitar</button></a>
             </div>
             <a target="_blank" href="https://ofertas.estadao.com.br/">
-                <p style="color:#31363b;text-decoration: underline;">Ver mais ofertas</p>
+                <p style="color:#31363b;text-decoration: underline; margin:8px 0 18px 0">Ver mais ofertas</p>
             </a>
-            <p style="margin-top:0;color:#717171;">Já sou cadastrado.
+            <p style="margin-top:0;color:#717171; text-align: center;">Já sou cadastrado.
                 <a target="_blank" href="https://acesso.estadao.com.br/login/?r=https://www.estadao.com.br/"><span style="color: #2575e8; text-decoration: underline;">Entrar</span></a>
             </p>
         </div>
@@ -42,7 +31,98 @@
 
             <p style="color:#717171">Ambiente Seguro</p>
         </footer>
+    </div>
     </main>
-</body>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  body{
+    overflow: hidden !important;
+  }
+  .background {
+    z-index: 19;
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 100%;
+    height: 100%;
+    overflow-y: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+  }
+.modal{
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.16);
+    font-family: 'Lato';
+    background-color: #f9f9f9;
+}
+.spaceOffers{
+    color: white;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-</html>
+footer{
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #e0e0e0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+  }
+button{
+    background-color: #529c3f;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    padding:12px;
+}
+.offer{
+    background-color: #2575e8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding:12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.initial-text{
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+    </style>

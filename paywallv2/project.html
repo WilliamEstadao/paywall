@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-    <title>Document</title>
-</head>
-
-<body>
     <main class="background">
     <div class="modal">
         <div class="master-template">
@@ -97,7 +85,6 @@
     </div>
     </main>
 
-</body>
 <script>
     let receber = (text) => {
 
@@ -129,5 +116,322 @@
 
     }
 </script>
+<style>
+    /* ----------------------------------------DESKTOP------------------------------------------------ */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap'); */
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body{
+  overflow: hidden !important;
+}
+.background {
+  z-index: 19;
+  background-color: rgba(0, 0, 0, 0.473);
+  width: 100%;
+  height: 100%;
+  overflow-y: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+.button-newpaywall{
+  width: 96px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: #2575e8;
+  border:none;
+  color:white;
+  font-weight: normal;
+  cursor: pointer;
+  }
+  .modal{
+  width: 497px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.16);
+  background-color: #f9f9f9;
+  font-family: 'Lato';
+  padding-top: 16px;
+  }
+.initial-text-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+.master-template{
+  display:flex; 
+  flex-direction:column; 
+  align-items: center;
+  height: 100%;
+}
+.title-subtitle{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  line-height:1.3;
+  margin-top: 14px;
+}
+.card-selector{
+  display: flex;
+	flex-direction:row;
+	justify-content: center;
+	border-radius: 9px;
+	background-color: #ffffff;
+  align-items: center;
+	font-size: 12px;
+	font-weight: bold;
+	border: solid 2px #2575e8;
+	margin-top: 20px;
+  margin-bottom: 35px;
+  width: 192px;
+}
+#selected{
+  cursor:pointer;
+  background-color: #2575e8;
+  color: white;
+  cursor: default;
+  border-radius: 3px;
+}
+#notselected{
+  background-color: white;
+  color: #2575e8;
+  cursor: pointer;
+  border-radius: none;
+}
+.digital {
+  border-radius: 5px;
+  width: 51%;
+  padding: 6px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.impresso{
+  border-radius: 5px;
+  width: 51%;
+  padding: 6px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.highlight-offer{
+  border-radius: 8px;
+  background-color: #2575e8;
+  padding:16.1px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lato';
+  line-height:2;
+}
+.offer{
+  border-radius: 8px;
+  border: solid 1px #2575e8;
+  background-color: #fff;
+  padding: 16.1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#717171;
+  margin-top:30px;
+  line-height:2;
+}
+.offer1-impresso{
+  border-radius: 8px;
+  background-color: white;
+  border: solid 1px #2575e8;
+  padding: 16.1px;
+  color: #717171;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lato';
+  line-height:2;
+}
+.offer2-impresso{
+  border-radius: 8px;
+  border: solid 1px #2575e8;
+  background-color: #fff;
+  padding: 16.1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#717171;
+  margin-top:30px;
+  line-height:2;
+}
+.offer-button{
+  border:none;
+  padding: 8px 16px;
+  min-width: 150px;
+  margin-left: 12px;
+  color:white;
+  border-radius: 5px;
+  background-color: #529c3f;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.title-offer{
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.79;
+  text-transform: uppercase;
+}
 
-</html>
+.subtitle-offer{
+  font-size: 12px;
+  font-weight: normal;
+}
+.text-offer{
+font-size: 9px;
+font-style: italic;
+}
+.voucher1-digital{
+  background-color: #f19b2c;
+  width: 127.4px;
+  height: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 7px;
+  font-weight: 800;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px ;
+  text-transform: uppercase;
+  position: absolute;
+  margin-left:270px;
+  margin-top:-16px;
+}
+.voucher2-digital{
+  background-color: #2575e8;
+  width: 127.4px;
+  height: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 7px;
+  font-weight: 800;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px ;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top:15px;
+  margin-left:270px;
+}
+.voucher1-impresso{
+  background-color: #e82525;
+  width: 127.4px;
+  height: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 7px;
+  font-weight: 800;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px ;
+  text-transform: uppercase;
+  position: absolute;
+  margin-left:230px;
+  margin-top:-16px;
+}
+.voucher2-impresso{
+  background-color: #1cabeb;
+  width: 127.4px;
+  height: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 7px;
+  font-weight: 800;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px ;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top:155px;
+  margin-left:230px;
+}
+footer{
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: #e0e0e0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+/* ----------------------------------------MOBILE------------------------------------------------ */
+
+@media (max-width: 435px) {
+  .initial-text-button{
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  .title-subtitle{
+    margin-top: 12px;
+  }
+}
+
+@media(max-width:480px){
+
+  .highlight-offer{
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+   } 
+   .offer{
+    flex-direction: column;
+  }
+  .offer1-impresso{
+    flex-direction: column;
+    justify-content: left;
+   } 
+   .offer2-impresso{
+    flex-direction: column;
+  }
+  .offer-texts{
+    width: 100%;
+  }
+  .offer-button{
+    width: 100%;
+    height: 36px;
+    margin-left: 0;
+  }
+  .button_mobile{
+    width: 100%;
+  }
+  .voucher1-digital{
+    margin-left:130px;
+    padding:2px;
+  }
+  .voucher2-digital{
+    margin-left:130px;
+    padding:2px;
+  }
+  .voucher1-impresso{
+    margin-left:100px;
+    padding:2px;
+  }
+  .voucher2-impresso{
+    margin-left:100px;
+    margin-top: 190px;
+    padding:2px;
+  }
+}
+</style>
