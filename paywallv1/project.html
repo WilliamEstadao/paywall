@@ -7,7 +7,7 @@
                         <button class="button-newpaywall"> Entrar </button> </a>
                 </div>
                 <div class="title-subtitle">
-                    <h2 style="font-size: 22px; color:black;font-family:EstadoFine;font-weight:800;text-align: center;">Garanta acesso ao melhor do jornalismo</h2>
+                    <h2 style="font-size: 22px; color:black;font-family:EstadoFine;font-weight:800;text-align: center;">Garanta acesso ilimitado ao melhor do jornalismo</h2>
                     <h3 style="font-size: 16px;font-weight: 600;color:#2575e8;font-style: italic;">Escolha seu plano:</h3>
                 </div>
                 <div class="card-selector" value="digital">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="offer1-impresso">
                         <div>
-                            <h2 class="title-offer" style="color:#2575e8; font-weight: bold;">IMPRESSO + DIGITAL</h2>
+                            <h2 class="title-offer" style="color:#2575e8; font-weight: bold;">IMPRESSO FINAL DE SEMANA + DIGITAL</h2>
                             <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$46,90/mês
                                 </span><span
                                     style="font-size: 14px;font-weight: 800;color: #2575e8;">R$24,90</span>/mês* </h3>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="offer2-impresso">
                         <div class="offer-texts">
-                            <h2 class="title-offer" style="color: #2575e8;">IMPRESSO + DIGITAL</h2>
+                            <h2 class="title-offer" style="color: #2575e8;">IMPRESSO TODOS OS DIAS + DIGITAL</h2>
                             <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$74,90/mês
                                 </span><span style="color:#2575e8;font-size: 14px;font-weight: 800;">R$56,90</span>/mês*
                             </h3>
@@ -547,7 +547,11 @@ font-style: italic;
 }
 
 /* ----------------------------------------MOBILE------------------------------------------------ */
-
+@media(max-width: 520px){
+    .modal{
+        margin: 11px;
+    }
+}
 @media (max-width: 435px) {
   .initial-text-button{
     flex-direction: column;
@@ -557,7 +561,11 @@ font-style: italic;
     margin-top: 12px;
   }
 }
-
+@media(max-width: 415px){
+    .voucher2-impresso{
+        margin-top: 170px;
+    }
+}
 @media(max-width:480px){
   .offer-texts{
     width: 100%;
@@ -592,29 +600,34 @@ font-style: italic;
         margin-left: 165px;
     }
 }
-
-@media(max-width: 350px){
+@media(max-width: 360px){
     .voucher1-digital{
-        width: 90px;
-        font-size: 8px;
-        margin-left: 160px;
+        width: 85px;
+        font-size: 7px;
+        margin-left: 155px;
     }
     .voucher2-digital{
-        width: 90px;
-        font-size: 8px;
-        margin-left: 160px;
-    }   
-    .voucher1-impresso{
+        width: 85px;
+        font-size: 7px;
         margin-left: 155px;
+    } 
+} 
+
+@media(max-width: 350px){
+  
+    .voucher1-impresso{
+        margin-left: 135px;
     }
     .voucher2-impresso{
-        margin-left: 155px;
-        
+        margin-left: 145px;
+        margin-top: 170px;
     }
-    @media(max-width: 335px){
+    @media(max-width: 345px){
     .voucher2-impresso{ 
-        margin-top: 165px;
+        margin-top: 190px;
+        margin-left: 130px;
     }
-    } 
+    
+    }  
 }
 </style>
