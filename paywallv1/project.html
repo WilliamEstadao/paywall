@@ -7,12 +7,11 @@
                         <button class="button-newpaywall"> Entrar </button> </a>
                 </div>
                 <div class="title-subtitle">
-                    <h2 style="font-size: 22px; color:black;font-family:EstadoFine;font-weight:800;">Assine o melhor
-                        jornal do Brasil</h2>
+                    <h2 style="font-size: 22px; color:black;font-family:EstadoFine;font-weight:800;text-align: center;">Garanta acesso ao melhor do jornalismo</h2>
                     <h3 style="font-size: 16px;font-weight: 600;color:#2575e8;font-style: italic;">Escolha o melhor
                         plano:</h3>
                 </div>
-                <div class="card-selector">
+                <div class="card-selector" value="digital">
                     <div class="digital" id="selected" onclick="replaceOffer('digital')">
                         DIGITAL
                     </div>
@@ -34,6 +33,7 @@
                                 versão digital e Acervo Estadão</p>
                         </div>
                         <div class="circle" id="circle-digital-anual" onclick="chosenOfferDigital('digital-anual')">
+                            <img id="img-digital-anual" src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-256.png" style="width: 14px;"/>
                         </div>
                     </div>
                     <div class="voucher2-digital">
@@ -70,8 +70,8 @@
                                 nos <span style="color:#2575e8">fins de semana</span>, acesso ao Estadão.com.br, <br />
                                 aplicativo IOS e Android, versão digital e Acervo Estadão</p>
                         </div>
-                        <div class="circle" id="circle-impresso-weekends"
-                            onclick="chosenOfferImpresso('impresso-weekends')">
+                        <div class="circle" id="circle-impresso-weekends" onclick="chosenOfferImpresso('impresso-weekends') ">
+                            <img id="img-impresso-weekends" src='https://cdn-icons-png.flaticon.com/512/9918/9918684.png' style="width:35px;height: 35px; position:absolute;"/>
                         </div>
                     </div>
                     <div class="voucher2-impresso">
@@ -116,20 +116,25 @@
         const imgMensal = document.getElementById('img-digital-mensal')
         const imgEveryDay = document.getElementById('img-impresso-everyday')
         const imgWeekends = document.getElementById('img-impresso-weekends')
+        const cardSelector = document.querySelector('.card-selector')
+        
+        if(cardSelector.value === 'digital' || !cardSelector.value){
+            console.log('digital')
+            if (imgAnual) {
+                window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014");
+            } else {
+                window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097")          
+            }
+        }
 
-        if (imgAnual) {
-            window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014");
-        } else if (imgMensal) {
-            window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097")
-        } else if (imgEveryDay) {
-            window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089")
-        } else if (imgWeekends) {
-            window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-2490-4690-carrefour-am370029")
-        } else {
-            alert('escolha uma oferta e aproveite')
+        else{
+            if(imgEveryDay){
+                window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089")
+            } else{
+                window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-2490-4690-carrefour-am370029")
         }
     }
-
+}
     let replaceOffer = (text) => {
 
         let digital = document.querySelector('.digital')
@@ -140,13 +145,10 @@
         const imgMensal = document.getElementById('img-digital-mensal')
         const imgEveryDay = document.getElementById('img-impresso-everyday')
         const imgWeekends = document.getElementById('img-impresso-weekends')
+        const cardSelector = document.querySelector('.card-selector')
 
         if (text === 'digital') {
-            if (imgEveryDay || imgWeekends) {
-                imgEveryDay && imgEveryDay.parentNode.removeChild(imgEveryDay)
-                imgWeekends && imgWeekends.parentNode.removeChild(imgWeekends)
-            }
-
+            cardSelector.value = 'digital'
             let attributeId = digital.getAttribute('id')
             if (attributeId === 'notselected') {
                 digital.setAttribute('id', 'selected')
@@ -157,10 +159,7 @@
 
         }
         if (text === 'impresso') {
-            if (imgAnual || imgMensal) {
-                imgAnual && imgAnual.parentNode.removeChild(imgAnual)
-                imgMensal && imgMensal.parentNode.removeChild(imgMensal)
-            }
+            cardSelector.value = 'impresso'
             let idAttribute = impresso.getAttribute('id')
             if (idAttribute === 'notselected') {
                 impresso.setAttribute('id', 'selected')
@@ -185,8 +184,6 @@
                 image.id = "img-digital-anual"
                 circleAnual.appendChild(image);
                 imgMensal && imgMensal.parentNode.removeChild(imgMensal)
-            } else {
-                imgAnual.parentNode.removeChild(imgAnual)
             }
 
         } else {
@@ -195,8 +192,6 @@
                     image.id = "img-digital-mensal"
                     circleMensal.appendChild(image);
                     imgAnual && imgAnual.parentNode.removeChild(imgAnual)
-                } else {
-                    imgMensal.parentNode.removeChild(imgMensal)
                 }
             }
         }
@@ -207,16 +202,15 @@
         const imgEveryDay = document.getElementById('img-impresso-everyday')
         const imgWeekends = document.getElementById('img-impresso-weekends')
 
-        const image = new Image(40)
+        const image = new Image(35)
         image.src = 'https://cdn-icons-png.flaticon.com/512/9918/9918684.png'
+        image.style.position="absolute"
         if (offer === 'impresso-everyday') {
             if (!imgEveryDay) {
                 image.id = "img-impresso-everyday"
                 circleEveryDay.appendChild(image);
                 imgWeekends && imgWeekends.parentNode.removeChild(imgWeekends)
-            } else {
-                imgEveryDay.parentNode.removeChild(imgEveryDay)
-            }
+            } 
 
         } else {
             if (offer === 'impresso-weekends') {
@@ -224,8 +218,6 @@
                     image.id = "img-impresso-weekends"
                     circleWeekends.appendChild(image);
                     imgEveryDay && imgEveryDay.parentNode.removeChild(imgEveryDay)
-                } else {
-                    imgWeekends.parentNode.removeChild(imgWeekends)
                 }
             }
         }
