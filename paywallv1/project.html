@@ -8,8 +8,7 @@
                 </div>
                 <div class="title-subtitle">
                     <h2 style="font-size: 22px; color:black;font-family:EstadoFine;font-weight:800;text-align: center;">Garanta acesso ao melhor do jornalismo</h2>
-                    <h3 style="font-size: 16px;font-weight: 600;color:#2575e8;font-style: italic;">Escolha o melhor
-                        plano:</h3>
+                    <h3 style="font-size: 16px;font-weight: 600;color:#2575e8;font-style: italic;">Escolha seu plano:</h3>
                 </div>
                 <div class="card-selector" value="digital">
                     <div class="digital" id="selected" onclick="replaceOffer('digital')">
@@ -110,28 +109,67 @@
         </div>
     </main>
 <script>
-
+    if (window.dataLayerEstadao) {
+    window.dataLayerEstadao.push({
+        event: "genericEvent",
+        genericCategory: "paywall",
+        genericAction: "show",
+        genericLabel: "anonimo_visualizado_teste_A",
+    });
+  }
+  let campaignId = JSON.parse(localStorage.getItem('interaction_studio_campaign_id'));
     let goOffer = () => {
         const imgAnual = document.getElementById('img-digital-anual')
         const imgMensal = document.getElementById('img-digital-mensal')
         const imgEveryDay = document.getElementById('img-impresso-everyday')
         const imgWeekends = document.getElementById('img-impresso-weekends')
         const cardSelector = document.querySelector('.card-selector')
-        
+
         if(cardSelector.value === 'digital' || !cardSelector.value){
-            console.log('digital')
             if (imgAnual) {
-                window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014");
+                if (window.dataLayerEstadao) {
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "digital_anual_anonimo_teste_A",
+            });
+            }
+                window.location.assign("https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014");
             } else {
-                window.open("https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097")          
+                if (window.dataLayerEstadao) {
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "digital_mensal_anonimo_teste_A",
+            });
+            }
+                window.location.assign("https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097")          
             }
         }
 
         else{
             if(imgEveryDay){
-                window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089")
+                if (window.dataLayerEstadao) {
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "impresso_diario_anonimo_teste_A",
+            });
+            }
+                window.location.assign("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089")
             } else{
-                window.open("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-2490-4690-carrefour-am370029")
+                if (window.dataLayerEstadao) {
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "impresso_fds_anonimo_teste_A",
+            });
+            }
+                window.location.assign("https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-2490-4690-carrefour-am370029")
         }
     }
 }
