@@ -13,11 +13,11 @@
             </div>
             <div style="width: 100%;">
                 <a 
-                    href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097">
-                    <button class="finally-button">Quero aproveitar</button>
+                    href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097?paywall_dinamico=paywall_zephr_anonimo_teste_C">
+                    <button class="finally-button" onclick="setEvent('digital-mensal')">Quero aproveitar</button>
                 </a>
             </div>
-            <a  href="https://ofertas.estadao.com.br/">
+            <a target="_blank" href="https://ofertas.estadao.com.br?paywall_dinamico=paywall_zephr_anonimo_teste_C" onclick="setEvent('mais-ofertas')">
                 <p style="color:#31363b;text-decoration: underline; margin:8px 0 18px 0">Ver mais ofertas</p>
             </a>
             <p style="margin-top:0;color:#717171; text-align: center;">Já sou cadastrado.
@@ -35,6 +35,38 @@
         </footer>
     </div>
     </main>
+    <script>
+         if (window.dataLayerEstadao) {
+        window.dataLayerEstadao.push({
+        event: "genericEvent",
+        genericCategory: "paywall",
+        genericAction: "show",
+        genericLabel: "anonimo_visualizado_teste_B",
+        });
+        }
+    const setEvent = (offer) => {
+        if (window.dataLayerEstadao) {
+            if(offer === 'digital-mensal'){
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "digital_mensal_anonimo_teste_C",
+            });
+            return 
+          }
+            if (offer === 'mais-ofertas'){
+                window.dataLayerEstadao.push({
+                event: "genericEvent",
+                genericCategory: "paywall",
+                genericAction: "click",
+                genericLabel: "ver_ofertas_anonimo_teste_C",
+            });
+            return
+        } 
+    }
+    }
+    </script>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); */
 *{
