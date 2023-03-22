@@ -28,7 +28,7 @@
                         <p class="text-offer">Inclui acesso ao Estadão.com.br, aplicativo IOS e Android,<br/>
                             versão digital e Acervo Estadão</p>
                     </div>
-                      <a class="button_mobile" target="_blank" href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('digital-anual')">assine agora</button></a>
+                      <a class="button_mobile"  href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('digital-anual')">assine agora</button></a>
                 </div>
                 <div class="voucher2-digital">
                     <p>por tempo limitado</p>
@@ -41,7 +41,7 @@
                         <p class="text-offer">Inclui acesso ao Estadão.com.br, aplicativo
                         IOS e Android</p>
                     </div>
-                        <a class="button_mobile" href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('digital-anual')"> assine agora</button></a>
+                        <a class="button_mobile"  href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-190-2190-am170097?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('digital-mensal')"> assine agora</button></a>
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                             nos <span style="color:#2575e8">todos os dias</span>, acesso ao Estadão.com.br, <br/>
                             aplicativo IOS e Android, versão digital e Acervo Estadão</p>
                     </div>
-                        <a  class="button_mobile" href="https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('impresso-tds')"> assine agora</button></a>
+                        <a  class="button_mobile"  href="https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-5690-7490-am170089?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('impresso-tds')"> assine agora</button></a>
                 </div>
             </div>
             <footer class="footer-modal">
@@ -86,6 +86,7 @@
     </main>
 
 <script>
+  window.dataLayerEstadao = []
     if (window.dataLayerEstadao) {
     window.dataLayerEstadao.push({
         event: "genericEvent",
@@ -96,6 +97,7 @@
   }
 
     const setEvent = (offer) => {
+      console.log(offer)
       if (window.dataLayerEstadao) {
       if(offer === 'digital-anual'){
                 window.dataLayerEstadao.push({
@@ -124,7 +126,7 @@
             });
             return
         } 
-        if (offer === 'impreso-tds'){
+        if (offer === 'impresso-tds'){
                 window.dataLayerEstadao.push({
                 event: "genericEvent",
                 genericCategory: "paywall",
