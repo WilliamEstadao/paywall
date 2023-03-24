@@ -24,7 +24,7 @@
                   </div>
               </div>
 
-                <div class="highlight-offer">
+                <div class="offer">
                     <div>
                         <h2 class="title-offer">DIGITAL COMPLETA + R$30 CARREFOUR</h2>
                         <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$190,80/ano </span><span style="font-size: 14px;font-weight: 800;">R$106,90</span>/ano* </h3>
@@ -34,12 +34,12 @@
                       <a class="button_mobile"  href="https://assine.estadao.com.br/subscribe/estadao-digital-completa-10690-carrefour-aa170014?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('digital-anual')">assine agora</button></a>
                 </div>
                 <div style="margin-top: 20px;">
-                    <div class="position-voucher" style="margin-bottom: -45px;">
+                    <div class="position-voucher">
                   <div class="voucher" style="background-color:#2575e8;">
                       <p>por tempo limitado</p>
                   </div>
                 </div>
-                  <div class="offer">
+                  <div class="offer" style="border: solid 1px #2575e8; background-color: white;color:#717171;">
                       <div class="offer-texts">
                           <h2 class="title-offer">DIGITAL COMPLETA</h2>
                           <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$21,90/mês </span><span style="color:#2575e8;font-size: 14px;font-weight: 800;">R$1,90</span>/mês*</h3>
@@ -60,7 +60,7 @@
                     <p>+ R$30 CARREFOUR</p>
                 </div>
                 </div>
-                <div class="offer1-impresso">
+                <div class="offer" style="border: solid 1px #2575e8; background-color: white;color:#717171;">
                     <div>
                         <h2 class="title-offer" style="color:#2575e8; font-weight: bold;">IMPRESSO FINAL DE SEMANA + DIGITAL</h2>
                         <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$46,90/mês  </span><span style="font-size: 14px;font-weight: 800;color: #2575e8;">R$24,90</span>/mês* </h3>
@@ -71,13 +71,13 @@
                        <a  class="button_mobile"  href="https://assine.estadao.com.br/subscribe/estadao-impresso-em-casa-2490-4690-carrefour-am370029?paywall_dinamico=paywall_zephr_anonimo_teste_B"><button class="offer-button" onclick="setEvent('impresso-fds')">assine agora</button></a>
                 </div>
                 <div style="margin-top: 20px;">
-                  <div class="position-voucher" style="margin-bottom: -45px;">
+                  <div class="position-voucher">
                     <div class="voucher" style="background-color: #1cabeb;">
                       <p>+ R$50 SUBMARINO</p>
                     </div>
                   </div>
 
-                <div class="offer2-impresso">
+                <div class="offer" style="border: solid 1px #2575e8; background-color: white;color:#717171;">
                     <div class="offer-texts">
                         <h2 class="title-offer" style="color: #2575e8;">IMPRESSO TODOS OS DIAS + DIGITAL</h2>
                         <h3 class="subtitle-offer"><span style="text-decoration: line-through;">R$74,90/mês </span><span style="color:#2575e8;font-size: 14px;font-weight: 800;">R$56,90</span>/mês*</h3>
@@ -294,7 +294,7 @@ body{
   text-align: center;
   text-transform: capitalize;
 }
-.highlight-offer{
+.offer{
   border-radius: 8px;
   background-color: #2575e8;
   padding:16.1px;
@@ -305,46 +305,11 @@ body{
   font-family: 'Lato';
   line-height:2;
 }
-.offer{
-  border-radius: 8px;
-  border: solid 1px #2575e8;
-  background-color: #fff;
-  padding: 16.1px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color:#717171;
-  margin-top:30px;
-  line-height:2;
-}
-.offer1-impresso{
-  border-radius: 8px;
-  background-color: white;
-  border: solid 1px #2575e8;
-  padding: 16.1px;
-  color: #717171;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Lato';
-  line-height:2;
-}
-.offer2-impresso{
-  border-radius: 8px;
-  border: solid 1px #2575e8;
-  background-color: #fff;
-  padding: 16.1px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color:#717171;
-  margin-top:30px;
-  line-height:2;
-}
+
 .offer-button{
   border:none;
   padding: 8px 16px;
-  min-width: 150px;
+  min-width: 140px;
   margin-left: 12px;
   color:white;
   border-radius: 5px;
@@ -421,21 +386,11 @@ font-style: italic;
 
 @media(max-width:480px){
 
-  .highlight-offer{
+  .offer{
     flex-direction: column;
     justify-content: left;
     align-items: flex-start;
    } 
-   .offer{
-    flex-direction: column;
-  }
-  .offer1-impresso{
-    flex-direction: column;
-    justify-content: left;
-   } 
-   .offer2-impresso{
-    flex-direction: column;
-  }
   .offer-texts{
     width: 100%;
   }
