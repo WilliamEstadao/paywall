@@ -234,8 +234,8 @@ body{
   background-color: #f9f9f9;
   font-family: 'Lato';
   padding-top: 16px;
-  margin: 12px;
   }
+
 .initial-text-button{
   display: flex;
   align-items: center;
@@ -405,4 +405,22 @@ font-style: italic;
     width: 100%;
   }
 }
+
+@media(max-height:750px) and (max-width:400px){
+  #offer-digital{
+  width: 70%;
+}
+#offer-impresso{
+  width: 70%;
+}
+.background{
+  justify-content: end;
+  flex-direction: column;
+}
+.modal{
+  overflow-y: scroll;
+  height: 550px;
+}
+}
+
 </style>
